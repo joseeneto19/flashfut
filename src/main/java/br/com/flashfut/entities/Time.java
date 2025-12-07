@@ -1,5 +1,6 @@
 package br.com.flashfut.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,6 +24,7 @@ public class Time {
     private String nome;
     private String estadio;
     private String mascote;
+    @JsonIgnore
     @OneToMany(mappedBy = "time")
     private List<Jogador> jogadores;
 }
