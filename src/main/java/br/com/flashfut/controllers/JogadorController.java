@@ -24,4 +24,21 @@ public class JogadorController {
         return service.criarJogador(jogador);
     }
 
+    @GetMapping("/{id}")
+    public Jogador buscarPorId(@PathVariable Long id) {
+        return service.buscarPorId(id);
+    }
+
+    @PutMapping("/{id}")
+    public Jogador editar(@PathVariable Long id, @RequestBody Jogador jogador) {
+        return service.editar(id, jogador);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable Long id) {
+        service.deletar(id);
+    }
+
+
+
 }
