@@ -21,12 +21,15 @@ public class Jogador {
     private Long id;
     @Column(nullable = false)
     private String nome;
+    @Column(name = "data_de_nascimento")
     private LocalDate dataDeNascimento;
     @ManyToOne
     @JoinColumn(name = "time_id")
     private Time time;
     private Double altura;
     private Double peso;
+    @Column(name = "pais_de_nascimento")
     private String paisDeNascimento;
+    @Column(name = "numero_da_camisa")
     private Integer numeroDaCamisa;
 }
