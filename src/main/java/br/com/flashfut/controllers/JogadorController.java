@@ -1,6 +1,6 @@
 package br.com.flashfut.controllers;
 
-import br.com.flashfut.entities.Jogador;
+import br.com.flashfut.dto.JogadorDTO;
 import br.com.flashfut.services.JogadorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -15,22 +15,22 @@ public class JogadorController {
     private final JogadorService service;
 
     @GetMapping
-    public List<Jogador> listarJogadores() {
+    public List<JogadorDTO> listarJogadores() {
         return service.listarJogadores();
     }
 
     @PostMapping
-    public Jogador criarJogador(@RequestBody Jogador jogador) {
+    public JogadorDTO criarJogador(@RequestBody JogadorDTO jogador) {
         return service.criarJogador(jogador);
     }
 
     @GetMapping("/{id}")
-    public Jogador buscarPorId(@PathVariable Long id) {
+    public JogadorDTO buscarPorId(@PathVariable Long id) {
         return service.buscarPorId(id);
     }
 
     @PutMapping("/{id}")
-    public Jogador editar(@PathVariable Long id, @RequestBody Jogador jogador) {
+    public JogadorDTO editar(@PathVariable Long id, @RequestBody JogadorDTO jogador) {
         return service.editar(id, jogador);
     }
 

@@ -2,7 +2,9 @@ package br.com.flashfut.mapper;
 
 import br.com.flashfut.dto.JogadorDTO;
 import br.com.flashfut.entities.Jogador;
+import org.springframework.stereotype.Component;
 
+@Component
 public class JogadorMapper {
 
     public Jogador toEntity(JogadorDTO jogadorDTO) {
