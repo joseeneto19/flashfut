@@ -10,10 +10,10 @@ public class JogadorMapper {
     public Jogador toEntity(JogadorDTO jogadorDTO) {
         Jogador jogador = new Jogador();
         jogador.setId(jogadorDTO.getId());
-        jogador.setNome(jogador.getNome());
+        jogador.setNome(jogadorDTO.getNome());
         jogador.setDataDeNascimento(jogadorDTO.getDataDeNascimento());
         jogador.setAltura(jogadorDTO.getAltura());
-        jogador.setPeso(jogador.getPeso());
+        jogador.setPeso(jogadorDTO.getPeso());
         jogador.setPaisDeNascimento(jogadorDTO.getPaisDeNascimento());
         jogador.setNumeroDaCamisa(jogadorDTO.getNumeroDaCamisa());
         jogador.setTime(jogadorDTO.getTime());
